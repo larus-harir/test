@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+    <script>    
+        var cut=1
+        $(function() {
+            $("#topZone").hide();
+            $(".btn").click(function() {
+                $("#topZone").toggle(500);
+                if(cut%2===0){
+                    cut=cut+1
+                    $("main").animate({
+                    opacity: 1
+                })
+                }else{
+                    cut=cut+1
+                    $("main").animate({
+                    opacity: 0.3
+                })
+                }
+            })
+        })
+    </script>
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            font-family: "Nerko One", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        body,
+        #topZone,
+        header,
+        nav {
+            width: 100%;
+        }
+        
+        body {
+            width: 100%;
+            text-align: center;
+        }
+
+        main{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-image: url("test.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #topZone {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 8;
+        }
+
+        nav {
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+        }
+
+        ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-around;
+        }
+
+        li{
+            width: 100%;
+            height: 33%;
+        }
+
+        #topZone a{
+            font-size: 6vi;
+            font-weight: bolder;
+            color: white;
+            top: 35%;
+            position: relative;
+            /* background-color: wheat; */
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            /* background-color: rgba(242, 240, 255, 0.5); */
+            position: fixed;
+            z-index: 9;
+            letter-spacing: 2px;
+            color: rgb(255, 228, 78);
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        button {
+            /* background-image: url("menubar4.png"); */
+            font-size: 4vmin;
+            font-weight: bold;
+            border: 0;
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 10;
+            color: rgb(255, 228, 78);
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            letter-spacing: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main></main>
+    <header>
+        <h1></h1>
+        <h1>shining bear</h1>
+        <button class="btn">menu</button>
+    </header>
+    <div id="topZone">
+        <nav>
+            <ul>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
